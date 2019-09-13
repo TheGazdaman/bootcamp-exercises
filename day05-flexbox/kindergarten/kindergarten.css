@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.container,a {
+  width: 40em;
+  margin: 0 auto;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  display: inline;
+  padding: 0 1rem;
+
+  color: black;
+
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #223c88;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+h1, h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+
+  line-height: 150%;
+}
+
+section {
+  padding: 3rem 0rem 6rem 0rem;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url('img/banner.jpg');
+  background-size: cover;
+  background-attachment: inherit;
+  background-position: center;
+  height: 25rem;
+  background-repeat: no-repeat;
+}
+
+.banner h1 {
+  width: 18rem;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid white;
+
+  color: #fff;
+}
+
+.mission {
+  background-color: #FFE964;
+  color: black;
+
+  text-align: center;
+}
+
+.about-us {
+  background-color: #fff; 
+}
+
+.team {
+  background-color: #FF523D;
+  color: #fff;
+}
+
+.photo{
+  margin-bottom: 4rem;
+  color: #fff; 
+  text-align: center;
+}
+
+.photo img {
+  width: 200px;
+  height: 200px;    
+}
+
+.contact {
+  background-color: #223C88;
+  color: #fff;
+}
+
+.contact-part {
+  margin-bottom: 1rem
+}

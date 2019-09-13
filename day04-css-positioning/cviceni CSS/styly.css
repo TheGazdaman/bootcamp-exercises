@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.banner {
+  background-image: url('img/horse.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 0; 
+}
+
+.hello {
+  z-index: 1;
+}

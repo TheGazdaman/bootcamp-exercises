@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;  
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../img/got-bg.jpg') no-repeat;
+
+}
+
+.left {
+  align-self: flex-end;
+  color: #fff;
+  margin: 5rem;
+}
+
+.right {
+  margin: 5rem;
+  text-align: right;
+}
+

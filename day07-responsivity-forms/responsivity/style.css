@@ -1,0 +1,35 @@
+h1 {
+  font-size: 2em;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* much code ... */
+
+@media (min-width: 800px) {
+  h1 {
+      font-size: 2.5em;
+  }
+
+  header {
+      flex-direction: row;
+  }
+
+  /* much more code */
+}
+
+@media (min-width: 1200px) {
+  h1 {
+      font-size: 3em;
+      font-weight: 200;
+  }
+
+  header {
+      justify-content: center;
+  }
+
+  /* mucho code */
+}

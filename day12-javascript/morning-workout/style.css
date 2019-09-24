@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 90vmin;
+  width: 90vmin;
+  margin: 0 auto;
+}
+
+.chess {
+  display: flex;
+}
+
+.box { 
+  width: 10vmin;
+  height: 10vmin;
+  padding: 1px;
+}
+
+.white {
+  background: black; 
+  }
+
+.gray {
+  background: gray; 
+}

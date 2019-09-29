@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+@keyframes myanim {
+  0% {
+    transform: translateX(0px) 
+  } 
+
+  50% {
+    transform: translateX(200px) 
+  }
+  100% {
+    transform: translate(0)
+  }
+};
+
+body {
+  perspective: 500px;
+  perspective-origin: 55%;
+}
+
+.box {
+  width: 400px;
+  height: 300px;
+  background-color: orange;
+  transition: 2s;
+  /*transform-origin: 50% 50%;
+  animation-name: myanim;
+  animation-duration: 5s; */
+}
+
+.box--modifier {
+  width: 0px;
+  /* transform: translate(100px, 200px);
+  transform: rotateX(50deg);  */
+}

@@ -20,7 +20,7 @@ body {
 .box { 
   width: 10vmin;
   height: 10vmin;
-  padding: 1px;
+  margin: 1px;
 }
 
 .white {

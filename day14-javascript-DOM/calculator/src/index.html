@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+</head>
+<body>
+
+    <section class="calc">
+
+        <div class="horni-cast">
+
+            <div data-previous-operand class="calc__result" id="result">0</div>
+
+            <input data-current-operand type="calc__text" class="calc__input" id="input" value="0"/>
+
+        
+      <div class="buttons">
+        <div class="telo">
+          
+          <div class="clear-cast">
+            <button data-all-clear class="calc__btn" id="btn-clear">C</button>  <!-- data-all-clear je "data-atribute" a musí být v JS u query selectoru v hranatých závorkách. Je to něco jako string -->
+            <button data-number id="btn" class="calc__btn">7</button>
+            <button data-number id="btn" class="calc__btn">4</button>
+            <button data-number id="btn" class="calc__btn">1</button>
+          </div>
+
+          <div class="times-cast">
+            <button data-operation id="btn-times" class="calc__btn">&times;</button>
+            <button data-number id="btn" class="calc__btn">8</button>
+            <button data-number id="btn" class="calc__btn">5</button>
+            <button data-number id="btn" class="calc__btn">2</button>
+            
+          </div>
+            
+          <div class="divide-cast"> 
+            <button data-operation id="btn-divide" class="calc__btn">&divide;</button>
+            <button data-number id="btn" class="calc__btn">9</button>
+            <button data-number id="btn" class="calc__btn">6</button>
+            <button data-number id="btn" class="calc__btn">3</button>
+          </div>
+
+          <div class="plus-minus">
+            <button data-operation class="minus calc__btn" id="btn-minus" >&minus;</button>
+            <button data-operation class="minus calc__btn" id="btn-plus">&plus;</button>
+          </div>
+
+        </div>
+
+          <div class="nula-tecka">
+              <button data-number id="btn" class="nula calc__btn">0</button>
+              <button data-number id="btn-decimal" class="calc__btn">.</button>
+              <button data-equals  id="btn-equals" class="calc__btn">=</button>
+          </div>
+      </div>
+    </section>
+
+  <script src="/js/index.js"></script>
+</body>
+</html>

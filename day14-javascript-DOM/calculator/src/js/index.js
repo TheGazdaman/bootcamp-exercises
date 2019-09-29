@@ -1,25 +1,22 @@
 
 let result = 0;
 
-/* click  */
-const showFour = () => {
-  const calcInput = document.querySelector('#current-operand');
-  if (calcInput.value === '0') {
-    calcInput.value = '4';
-  } else {
-    calcInput.value += '4';
-  }
-};
 
+/* const updateDisplayMinus = () => {
+  // when operator is pressed value of first operand goes to previous operand and on the place of current operand is second operand. Then equals is pressed and we get result in the <div> previous operand.
+  const upMinus = document.querySelector('#btn-minus');
+  const
+
+}; */
 /* Plus */
 
 const handlePlusClick = () => {
   const textNumber = document.querySelector('#current-operand');
-  const number = parseInt(textNumber.value);
+  const number = parseInt(textNumber.value, 10);
   result += number;
 
   const textResult = document.querySelector('#previous-operand');
-  textResult.textContent = result;
+  textResult.textContent = textNumber.value;
 };
 /* Minus */
 
@@ -44,6 +41,7 @@ const handleClearClick = () => {
 const handleTimesClick = () => {
   const textTimes1 = document.querySelector('#current-operand');
   const timer = parseInt(textTimes1.value, 10);
+
   const textTimes2 = document.querySelector('#previous-operand');
   const timer2 = parseInt(textTimes2.innerHTML, 10);
 
@@ -75,9 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnClear = document.querySelector('#btn-clear');
   btnClear.addEventListener('click', handleClearClick);
 
-  /* const addDigit = document.querySelector('#');
-  addDigit.addEventListener('click', showDigit); */
-
   const btnPlus = document.querySelector('#btn-plus');
   btnPlus.addEventListener('click', handlePlusClick);
 
@@ -89,7 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const btnDivides = document.querySelector('#btn-divide');
   btnDivides.addEventListener('click', handleDivideClick);
-
-  const four = document.querySelector('#btn-four');
-  four.addEventListener('click', showFour);
 });

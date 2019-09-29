@@ -18,30 +18,29 @@
 
             <input type="calc__text" class="calc__input" id="current-operand" value="0"/>
 
-        
       <div class="buttons">
         <div class="telo">
           
           <div class="clear-cast">
-            <button class="calc__btn" id="btn-clear">C</button>  <!-- data-all-clear je "data-atribute" a musí být v JS u query selectoru v hranatých závorkách. Je to něco jako string -->
-            <button id="btn" class="calc__btn">7</button>
+            <button class="calc__btn" id="btn-clear">C</button>
+            <button id="btn-seven" class="calc__btn">7</button>
             <button id="btn-four" class="calc__btn">4</button>
-            <button id="btn" class="calc__btn">1</button>
+            <button id="btn-one" class="calc__btn">1</button>
           </div>
 
           <div class="times-cast">
             <button id="btn-times" class="calc__btn">&times;</button>
-            <button id="btn" class="calc__btn">8</button>
-            <button id="btn" class="calc__btn">5</button>
-            <button id="btn" class="calc__btn">2</button>
+            <button id="btn-eight" class="calc__btn">8</button>
+            <button id="btn-five" class="calc__btn">5</button>
+            <button id="btn-two" class="calc__btn">2</button>
             
           </div>
             
           <div class="divide-cast"> 
             <button id="btn-divide" class="calc__btn">&divide;</button>
-            <button id="btn" class="calc__btn">9</button>
-            <button id="btn" class="calc__btn">6</button>
-            <button id="btn" class="calc__btn">3</button>
+            <button id="btn-nine" class="calc__btn">9</button>
+            <button id="btn-six" class="calc__btn">6</button>
+            <button id="btn-three" class="calc__btn">3</button>
           </div>
 
           <div class="plus-minus">
@@ -52,7 +51,7 @@
         </div>
 
           <div class="nula-tecka">
-              <button id="btn" class="nula calc__btn">0</button>
+              <button id="btn-zero" class="nula calc__btn">0</button>
               <button id="btn-decimal" class="calc__btn">.</button>
               <button id="btn-equals" class="calc__btn">=</button>
           </div>
@@ -60,5 +59,6 @@
     </section>
 
   <script src="/js/index.js"></script>
+  <script src="/js/numbers.js"></script>
 </body>
 </html>

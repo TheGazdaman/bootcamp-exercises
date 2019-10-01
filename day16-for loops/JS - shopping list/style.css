@@ -21,3 +21,7 @@ body {
   padding: 1rem;
   margin: 2rem;
 }
+
+.checked {
+  align-self: flex-end;
+}

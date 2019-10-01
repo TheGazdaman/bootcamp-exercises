@@ -133,15 +133,6 @@ for (let i= 0; i < numbers.length; i++) {     // součet kladných hodnot v arra
 
  // console.log(Math.max(...numbers));     // return the MAX number from the array - using ... spread operator
 
-const secondMax = () => {
-
-const nums = [18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, -14, -10, 13, 8, -15, -2, 17];
-const max = Math.max(...nums);
-nums.splice(nums.indexOf(max), 1);   // remove max from the array
-console.log(Math.max(...nums));         // LOOKING FOR SECOND MAX NUMBER
-}
-
-
 /* const squareSum = (numbers)=>{
   let sum = 0; i = numbers.length; while (i--) 
   {
@@ -162,3 +153,21 @@ console.log(Math.max(...nums));         // LOOKING FOR SECOND MAX NUMBER
     // Finish this :)
     return Math.ceil(year/100);
   } */
+
+
+ // console.log(numbers.length); // function for telling the lenght of an array
+
+//  console.log(numbers.slice(-1)); // get the last element of an array 
+
+const nums = [18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, -14, -10, 13, 8, -15, -2, 17];
+
+const secondMax = () => {
+
+  const max = Math.max(...nums);
+  nums.splice(nums.indexOf(max), 1);   // remove max from the array
+  Math.max(...nums);         // LOOKING FOR SECOND MAX NUMBER
+
+  console.log(Math.max(...nums));
+  }
+  
+ 

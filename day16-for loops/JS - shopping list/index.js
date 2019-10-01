@@ -14,13 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const listElm = document.querySelector('.shopping-list');
 
   for (const item of shoppingList) {
-    const html = (
+    const btnChck = document.createElement('div');
+    btnChck.className = `btn-checked`;
+    btnChck.innerHTML = (
       `<div class="shopping-list__item">
         <span>${item.name}</span>
         <span>${item.amount}</span>
+        <input class="btn-checked" type="checkbox">
       </div>`
     );
-    listElm.innerHTML += html;
+
+    btnChck.querySelector('.btn-checked').addEventListener('click', (event) => {
+      if (item.checked) {
+        item.checked = false;
+      } else {
+        item.checked = true;
+      } console.log(item); 
+    }); 
+
+    listElm.appendChild(btnChck);
    
-  }
+  };
 });

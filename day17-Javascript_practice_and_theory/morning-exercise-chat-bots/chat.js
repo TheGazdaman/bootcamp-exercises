@@ -216,7 +216,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     listChat.innerHTML += part;
   }
-
- 
 })
 

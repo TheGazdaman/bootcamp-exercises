@@ -5,17 +5,18 @@ class Product {
     this.quantity = quantity;
   }
 
-  sell () {
-    return this.quantity -1;
-  } 
-  store () {
-    return this.quantity + 1;
-  } 
+  sell(amount) {
+    this.quantity -= 1;
+    }
+
+  store(amount) {
+      return this.quantity += 1;
+    }
 
 }
 
-const productList = [
-  new Product('TV', 350, 100),
+const products = [
+  new Product('TV', 350, 100, 100),
   new Product('Stereo', 200, 50),
   new Product('Mobile', 300, 200),
   new Product('Speaker', 249, 80),
@@ -24,28 +25,46 @@ const productList = [
   new Product('Tablet', 500, 50),
 ];
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  const stock = document.querySelector('#stock');
+  const list = document.querySelector('.product-list');
 
-  for (const item of productList) {
-    stock.innerHTML += (
-      `<div class="product__item">
-        <span>${item.name}</span>
-        <span>${item.price}</span>
-        <span>${item.quantity}</span>
-      </div>`
+  for (const product of products) {
+    const productElement = document.createElement('div');
+    productElement.classList.add('container');
+    productElement.innerHTML = (
+        `
+        <div class="product-name">Name: ${product.name}</div>
+        <div class="product-price">Price: ${product.price}</div>
+        <div class="product-quantity">Quantity: ${product.quantity}</div>
+        <button class="btn-buy">Sold</button>
+        <button class="btn-store">Store</button>
+      `
     );
+     const btnBuy = productElement.querySelector('.btn-buy');
+     const quantity = productElement.querySelector('.product-quantity');
+      
+     btnBuy.addEventListener('click', () => {
+       product.sell();
+       quantity.textContent = `In stock: ${product.quantity}`;
+       console.log('sell');
 
-    stock.innerHTML += html;
+     }); 
+
+     const btnStore = productElement.querySelector('.btn-store');
+     const amount = productElement.querySelector('.product-quantity');
+      
+     btnStore.addEventListener('click', () => {
+       product.store();
+       amount.textContent = `In stock: ${product.quantity}`;
+       console.log('store');
+    }); 
+
+    list.appendChild(productElement);
   }
-})
+});
 
 
-<div><h1>Products on stock</h1></div>
-  <div id="stock" class="product">
-    
-  </div>
+
 
 
 

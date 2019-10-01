@@ -1,0 +1,26 @@
+$black: black;
+ 
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.875em;
+}
+
+body {
+    margin: 0;
+    padding: 0 2em;
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+  }
+  
+  #animate{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+  }
+

@@ -1,13 +1,6 @@
 
 let result = 0;
 
-
-/* const updateDisplayMinus = () => {
-  // when operator is pressed value of first operand goes to previous operand and on the place of current operand is second operand. Then equals is pressed and we get result in the <div> previous operand.
-  const upMinus = document.querySelector('#btn-minus');
-  const
-
-}; */
 /* Plus */
 
 const handlePlusClick = () => {

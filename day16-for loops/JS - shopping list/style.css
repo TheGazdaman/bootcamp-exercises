@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.shopping-list {
+  width: 20rem;
+}
+
+.shopping-list__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(116, 116, 141);
+  padding: 1rem;
+  margin: 2rem;
+}

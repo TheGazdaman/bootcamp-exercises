@@ -10,7 +10,7 @@ class Product {
     }
 
   store(amount) {
-      return this.quantity += 1;
+    this.quantity += 1;
     }
 
 }
@@ -40,23 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="btn-store">Store</button>
       `
     );
-     const btnBuy = productElement.querySelector('.btn-buy');
-     const quantity = productElement.querySelector('.product-quantity');
+     const btnBuy = productElement.querySelector('.btn-buy');                // asigning HTML button class to a constant btnBuy
+     const quantity = productElement.querySelector('.product-quantity');   // asigning HTML query selector "quantity" to class product-quan
       
-     btnBuy.addEventListener('click', () => {
-       product.sell();
-       quantity.textContent = `In stock: ${product.quantity}`;
-       console.log('sell');
+     btnBuy.addEventListener('click', () => {                             // btnBuy was asigned eventListener
+       product.sell();                                                          // everytime btnBuy is clicked it calls clicked product and function sell, which is quantity -= 1;
+       quantity.textContent = `On stock: ${product.quantity}`;            // Quantity text content tells us how many products we have left
 
      }); 
 
-     const btnStore = productElement.querySelector('.btn-store');
+     const btnStore = productElement.querySelector('.btn-store');               // asigning HTML button class to a constant btnStore
      const amount = productElement.querySelector('.product-quantity');
       
      btnStore.addEventListener('click', () => {
        product.store();
-       amount.textContent = `In stock: ${product.quantity}`;
-       console.log('store');
+       amount.textContent = `On stock: ${product.quantity}`;        // Quantity text content tells us how many products we have left
+      
     }); 
 
     list.appendChild(productElement);

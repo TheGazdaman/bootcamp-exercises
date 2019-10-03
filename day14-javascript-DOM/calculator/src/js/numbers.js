@@ -1,6 +1,6 @@
-/* click  */
+
 const showZero = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '0';
   } else {
@@ -9,7 +9,7 @@ const showZero = () => {
 };
 
 const showOne = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '1';
   } else {
@@ -18,16 +18,16 @@ const showOne = () => {
 };
 
 const showTwo = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '2';
   } else {
-    calcInput.value += '2';
+    calcInput.value += 2;
   }
 };
 
 const showThree = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '3';
   } else {
@@ -36,7 +36,7 @@ const showThree = () => {
 };
 
 const showFour = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '4';
   } else {
@@ -45,7 +45,7 @@ const showFour = () => {
 };
 
 const showFive = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '5';
   } else {
@@ -54,7 +54,7 @@ const showFive = () => {
 };
 
 const showSix = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '6';
   } else {
@@ -63,7 +63,7 @@ const showSix = () => {
 };
 
 const showSeven = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '7';
   } else {
@@ -72,7 +72,7 @@ const showSeven = () => {
 };
 
 const showEight = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '8';
   } else {
@@ -80,41 +80,45 @@ const showEight = () => {
   }
 };
 const showNine = () => {
-  const calcInput = document.querySelector('#current-operand');
+  const calcInput = document.querySelector('.calc__input');
   if (calcInput.value === '0') {
     calcInput.value = '9';
   } else {
     calcInput.value += '9';
   }
 };
+
 document.addEventListener('DOMContentLoaded', () => {
   const zero = document.querySelector('#btn-zero');
-  zero.addEventListener('click', showZero);
+  zero.addEventListener('click', numberEvent);
 
   const one = document.querySelector('#btn-one');
-  one.addEventListener('click', showOne);
+  one.addEventListener('click', numberEvent);
 
   const two = document.querySelector('#btn-two');
-  two.addEventListener('click', showTwo);
+  two.addEventListener('click', numberEvent);
 
   const three = document.querySelector('#btn-three');
-  three.addEventListener('click', showThree);
+  three.addEventListener('click', numberEvent);
 
   const four = document.querySelector('#btn-four');
-  four.addEventListener('click', showFour);
+  four.addEventListener('click', numberEvent);
 
   const five = document.querySelector('#btn-five');
-  five.addEventListener('click', showFive);
+  five.addEventListener('click', numberEvent);
 
   const six = document.querySelector('#btn-six');
-  six.addEventListener('click', showSix);
+  six.addEventListener('click', numberEvent);
 
   const seven = document.querySelector('#btn-seven');
-  seven.addEventListener('click', showSeven);
+  seven.addEventListener('click', numberEvent);
 
   const eight = document.querySelector('#btn-eight');
-  eight.addEventListener('click', showEight);
+  eight.addEventListener('click', numberEvent);
 
   const nine = document.querySelector('#btn-nine');
-  nine.addEventListener('click', showNine);
+  nine.addEventListener('click', numberEvent);
+
+  const point = document.querySelector('#btn-point');
+  point.addEventListener('click', pointEvent);
 });

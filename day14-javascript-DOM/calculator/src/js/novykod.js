@@ -1,24 +1,21 @@
-/* eslint-disable prefer-const */
 let op = null;
 let lastValue = null;
 let newCounting = false;
 
-// vydeklaruju si elementy, které jsou na kalkulačce a které budu používat
-
 const clearEvent = () => {
   const result = document.querySelector('.calc__result');
   const input = document.querySelector('.calc__input');
-  const opShow = document.querySelector('calc__operator');
-  input.classList.remove('.calc__input--modifier');
+  const opShow = document.querySelector('.calc__operator');
+  input.classList.remove('calc__input--modifier');
   input.value = '0';
   result.textContent = '0';
   op = null;
-  opShow.textContent = '0';
+  opShow.textContent = '';
   newCounting = false;
 };
 
 const equalsEvent = () => {
-  const resultText = document.querySelector('calc__result');
+  const resultText = document.querySelector('.calc__result');
   const input = document.querySelector('.calc__input');
   if (input.classList.contains('calc__input--modifier') && lastValue !== null) {
     input.value = lastValue;
@@ -28,7 +25,7 @@ const equalsEvent = () => {
     case '+': resultText.textContent = parseFloat(resultText.textContent, 10) + parseFloat(input.value, 10);
       input.classList.add('calc__input--modifier');
       break;
-    case '-': resultText.textContent = parseFloat(resultText.textContent, 10) - parseFloat(input.value, 10);
+    case '−': resultText.textContent = parseFloat(resultText.textContent, 10) - parseFloat(input.value, 10);
       input.classList.add('calc__input--modifier');
       break;
     case '×': resultText.textContent = parseFloat(resultText.textContent, 10) * parseFloat(input.value, 10);
@@ -50,7 +47,7 @@ const updateOp = (sender) => {
 
 const opClick = (event) => {
   const input = document.querySelector('.calc__input');
-  if (!input.classList.contains('.calc__input--modifier')) { equalsEvent(); }
+  if (!input.classList.contains('calc__input--modifier')) { equalsEvent(); }
   op = event.target.textContent;
   updateOp(event.target);
   newCounting = false;
@@ -60,8 +57,8 @@ const checkForNewCounting = () => {
   const input = document.querySelector('.calc__input');
   if (newCounting) {
     clearEvent();
-  } else if (input.classList.contains('.calc__input--modifier')) {
-    input.classList.remove('.calc__input--modifier');
+  } else if (input.classList.contains('calc__input--modifier')) {
+    input.classList.remove('calc__input--modifier');
     input.value = '';
     newCounting = false;
   }
@@ -87,6 +84,7 @@ const pointEvent = () => {
     input.value += '.';
   }
 };
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnClear = document.querySelector('#btn-clear');

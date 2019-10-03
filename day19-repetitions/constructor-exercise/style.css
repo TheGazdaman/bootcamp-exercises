@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+.container {
+  margin: 5rem auto;
+  width: 20rem;
+}
+
+.todo {
+  background-color: lightgray;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.todo__name {
+  font-weight: bold;
+}

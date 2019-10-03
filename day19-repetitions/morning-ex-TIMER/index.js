@@ -1,4 +1,5 @@
-let seconds = 30;
+let seconds = 55;
+let minutes = 0;
 let intervalID = null;
 const btnUp = document.querySelector('.arrow-up');
 const btnDown = document.querySelector('.arrow-down');
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const runTimer = () => {
     if (seconds < 60) {
-      seconds--;
+      seconds++;
       updateCounter();
-    }
+    } 
   }
 
   btnUp.addEventListener('click', () => {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (seconds < 60) {
       seconds++;
       updateCounter();
-    }
+    } 
   })
 
   btnDown.addEventListener('click', () => {
@@ -46,11 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnReset.addEventListener('click', () => {
     const clear = document.querySelector('#counter');
-    seconds = 30; 
-    clear.textContent = 30;
+    seconds = 0; 
+    minutes = 0;
+    clear.textContent = 0;
     clearInterval(intervalID);   
   })
   })
+
 
   
   

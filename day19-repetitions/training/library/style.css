@@ -1,0 +1,27 @@
+* { 
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0 auto;
+
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.booky {
+  color: #fff;
+  margin: 10px;
+  height: 200px;
+  width: 160px;
+  padding: 5px;
+  background: rgb(48, 47, 47);
+}

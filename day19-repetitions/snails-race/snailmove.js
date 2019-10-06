@@ -1,4 +1,4 @@
-let snail = '';
+
 let speed = 40;
 let position = 0;
 const raceStart = document.querySelector('.snail-racer');

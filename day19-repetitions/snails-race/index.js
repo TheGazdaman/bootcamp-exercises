@@ -1,29 +1,22 @@
-const snail = '';
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const container = document.querySelector('.container');
 
-class Slimaci {
-  constructor (name, speed, color) {
-    this.name = name;
-    this.speed = speed;
-    this.color = color;
-  }
+  fetch('http://bootcamp.podlomar.org/api/snails/5')
+    .then(response => response.json())
+    .then(snails => {
+      for (const snail of snails) {
+        const slimak = new Snails(snail.name, snail.speed, snail.color);
+        slimak.mount(container);
+      }
+    });
 
-
-
-  render() {
-    this.element = document.createElement('div');
-    this.element.className = 'snail';
-    this.element.innerHTML = (
-
-    );
-  }
-
-  mount(parent) {
-    this.render();
-    parent.appendChild(this.element);
-  } 
-
-  update() {
-    const counter = this.element.querySelector('');
-
-  }
-}
+    document.addEventListener("keydown", (e) => {
+      if (e.keyCode === 32) {
+        console.log("spacebar");
+        for (let snail of snails) {
+          snail.move();
+        }
+      }
+    });
+});

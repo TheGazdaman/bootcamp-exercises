@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+.side--menu {
+  display: flex;
+  background: blue;
+  height: 100vh;
+  width: 80px;
+}
+
+.side--menu--modifier {
+  width: 300px;
+}
+
+.menu {
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.article {
+  display: flex;
+  padding: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 30px;
+}

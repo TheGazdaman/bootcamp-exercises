@@ -1,10 +1,10 @@
 
-const showText = () => {
+const hideText = () => {
   document.querySelector('#padlock');
   article.style.opacity = 0;
 }
 
-const hideText = () => {
+const showText = () => {
   document.querySelector('#padlock');
   article.style.opacity = 1;
 }

@@ -1,0 +1,10 @@
+.answer {
+    margin-bottom: 1rem;
+    background-color: gray;
+    padding: 1rem;
+    color: black;
+  
+    &__name {
+      font-weight: bold;
+    }
+}

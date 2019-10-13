@@ -47,7 +47,7 @@ class Timer {
   }
 
   render () {
-    this.element = document.createElement('<div>');
+    this.element = document.createElement('div');
     this.element.className = 'square';
     this.element.innerHTML = (`
     <div class="btn-reset"><p>RESET</p></div>

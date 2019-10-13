@@ -25,6 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
   knizka.appendChild(book);
   }
 
-  const addBook = 
-
-})
+});

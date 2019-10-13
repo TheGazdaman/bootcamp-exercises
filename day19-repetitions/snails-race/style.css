@@ -8,11 +8,11 @@ html {
 }
 
 .snail-racer {
-  width: 160px;
+  width: 100px;
 }
 
 .snail {
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 
@@ -26,6 +26,5 @@ html {
 
 .snail-racer__name {
   font-weight: bold;
-  text-align: center;
-  font-size: 120%;
+
 }

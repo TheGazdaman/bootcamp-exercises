@@ -41,12 +41,3 @@ const x = 20;
 const foo = (y, x) => y(x * x);
 
 console.log(foo(x => x + x, x)); */
-
-
-const attitude = (original, replacement, source) => {
-  (source) => source.replace(original, replacement);
-};
-
-const snakify = attitude(/The Millenials/ig, 'Snake people');
-
-console.log(snakify('The Millenials are always up to something.'));

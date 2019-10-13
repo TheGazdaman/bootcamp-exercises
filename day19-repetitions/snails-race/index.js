@@ -1,8 +1,11 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
   
   const container = document.querySelector('.container');
-
-  fetch('http://bootcamp.podlomar.org/api/snails/5')
+  let snails = [];
+   
+  fetch('http://bootcamp.podlomar.org/api/snails/6')
     .then(response => response.json())
     .then(snails => {
       for (const snail of snails) {
@@ -11,10 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    document.addEventListener("keydown", (e) => {
-      if (e.keyCode === 32) {
-        console.log("spacebar");
-        for (let snail of snails) {
+    document.addEventListener('keydown', (event) => {
+      if (event.keyCode === 32) {
+        for (const snail of snails) {
           snail.move();
         }
       }

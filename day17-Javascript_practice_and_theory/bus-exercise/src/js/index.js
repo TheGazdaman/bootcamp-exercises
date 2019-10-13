@@ -1,36 +1,35 @@
 class Bus {
-  constructor(direction, station, seat, passenger) {
+  constructor(direction, stations, seats, passengers) {
     this.direction = direction;
-    this.station = station;
-    this.seat = seat;
-    this.passenger = passenger;
+    this.stations = stations;
+    this.seats = seats;
+    this.passengers = passengers;
     this.lastStation = 0;
   }
 
   current() {
-    this.station = lastStation;
+    return this.station[this.lastStation];
   }
 
   next() {
-    return this.lastStation += 1;
+    this.lastStation += 1;
+    if (this.lastStation >= this.stations.length) {
+      this.lastStation = this.stations.length - 1;
+      console.log('Please, leave the bus.');
+    }
   }
 
-  boardCount() {
-    this.seat += 1;
-    if (number.seat >= 58) {
-      return "Bus is full";
-    } return "Bon voyage"; 
+  boardCount(pas) {
+    this.seat += pas;
+    if (this.passengers >= this.seats) {
+      return 'Bus is full'; //  this.passengers = this.seats
+    } return 'Bon voyage';
   }
 
-  unboardCount() {
-    this.seat -= 1;
-    if (number.seat > 0) {
-      console.log('Bus is empty');
+  unboardCount(pas) {
+    this.passengers -= pas;
+    if (this.passengers < 0) {
+      this.passengers = 0;
     }
   }
 }
-
-
-[
-  console.log('Prague-Vienna', ['Prague', 'Jihlava', 'Brno', 'Breclav', 'Vienna'], 55, 40, 'Jihlava'),
-];

@@ -159,7 +159,7 @@ for (let i= 0; i < numbers.length; i++) {     // součet kladných hodnot v arra
 
 //  console.log(numbers.slice(-1)); // get the last element of an array 
 
-const nums = [18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, -14, -10, 13, 8, -15, -2, 17];
+/* const nums = [18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, -14, -10, 13, 8, -15, -2, 17];
 
 const secondMax = () => {
 
@@ -168,6 +168,4 @@ const secondMax = () => {
   Math.max(...nums);         // LOOKING FOR SECOND MAX NUMBER
 
   console.log(Math.max(...nums));
-  }
-  
- 
+  } */

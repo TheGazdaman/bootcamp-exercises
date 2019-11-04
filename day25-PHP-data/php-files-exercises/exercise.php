@@ -15,9 +15,11 @@ $movies = [
 
 sort($movies);
 
+var_dump($_GET);
+
 // send JSON header
-header('Content-type: application/json');
+//header('Content-type: application/json');
 
 // this is being sent second
 
-echo json_encode($movies); 
+//echo json_encode($movies); 

@@ -34,7 +34,7 @@ function is_odd($number, &$is_big = false) {
 
 
 // function headling
-function headline($text, $level = 1) 
+function headline($text, $level = 1)  // level = 1 - default value.
 {
   return "<h{$level}>{$text}</h{$level}>";
 }

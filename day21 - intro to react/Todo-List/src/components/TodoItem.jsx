@@ -6,10 +6,12 @@ const TodoItem = (props) => {
       <input 
           type="checkbox" 
           checked={props.item.completed} 
-          onChange={()=> console.log('Change')}/>
+          onChange={ () => props.handleChange(props.item.id) }/>
       <p>{props.item.text}</p>
     </div>
   )
 }
 
 export default TodoItem
+
+

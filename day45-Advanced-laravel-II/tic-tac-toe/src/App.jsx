@@ -7,22 +7,39 @@ export default class Board extends React.Component {
     super()
     this.state = {
       squares: Array(9).fill(null),
-      player: this.setState === 1 ? 2 : 1
+      isXnext: true
 
     }  
-    this.renderSquare = this.renderSquare.bind(this)
+  }
+
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = this.state.isXnext ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      isXnext: !this.state.isXnext
+    })
   }
 
   renderSquare(i) {
-      return <Square value={i} />;
+      return (
+        <Square 
+          value={this.state.squares[i]} 
+          onClick={()=> this.handleClick(i)}
+        />
+      );
+     
   }
   
   render() {
+
+    let status = 'Turn player nr. ' + (this.state.isXnext ? 'X' : 'O')
+    
     return(
       <>
       <h1>Awesome-O 4000</h1>
       <div>
-        <h1>Turn player nr. {this.state.player}</h1>
+      <h1>{status}</h1>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
